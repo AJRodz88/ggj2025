@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		$Jump.play()
 
 	#CheckTiles()
 	# Get the input direction and handle the movement/deceleration.
@@ -32,7 +33,7 @@ func _physics_process(delta: float) -> void:
 
 func TakeHit():
 	GameManager.playerIsDead = true
-	queue_free()
+	$AnimationPlayer.play("Dead")
 	
 
 

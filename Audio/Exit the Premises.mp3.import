@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm2snlo73yjj1"
+path="res://.godot/imported/Exit the Premises.mp3-74d76d39105a33d0a26e8d2b099bdff3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Exit the Premises.mp3"
+dest_files=["res://.godot/imported/Exit the Premises.mp3-74d76d39105a33d0a26e8d2b099bdff3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

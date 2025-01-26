@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhfsh25uebtyt"]
+[gd_scene load_steps=5 format=3 uid="uid://dhfsh25uebtyt"]
 
 [ext_resource type="PackedScene" uid="uid://cdhsomgev87j0" path="res://player.tscn" id="1_3swfd"]
 [ext_resource type="Script" path="res://world.gd" id="1_5harh"]
 [ext_resource type="PackedScene" uid="uid://c0g68tc3ejq1n" path="res://floor.tscn" id="2_epqmi"]
+[ext_resource type="AudioStream" uid="uid://utq2mdbhhsl8" path="res://Audio/Corncob.mp3" id="4_ljaep"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_5harh")
@@ -12,3 +13,8 @@ position = Vector2(200, 350)
 
 [node name="Floor" parent="." instance=ExtResource("2_epqmi")]
 position = Vector2(593, 500)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ljaep")
+autoplay = true
+bus = &"Music"
