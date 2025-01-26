@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhfsh25uebtyt"]
+
+[ext_resource type="PackedScene" uid="uid://cdhsomgev87j0" path="res://player.tscn" id="1_3swfd"]
+[ext_resource type="Script" path="res://world.gd" id="1_5harh"]
+[ext_resource type="PackedScene" uid="uid://c0g68tc3ejq1n" path="res://floor.tscn" id="2_epqmi"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_5harh")
+
+[node name="Player" parent="." instance=ExtResource("1_3swfd")]
+position = Vector2(200, 350)
+
+[node name="Floor" parent="." instance=ExtResource("2_epqmi")]
+position = Vector2(593, 500)

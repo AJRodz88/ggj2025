@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c18sias7a2qu2"]
+
+[ext_resource type="PackedScene" uid="uid://bfiet1tpy1nmx" path="res://platform.tscn" id="1_1k2yy"]
+[ext_resource type="PackedScene" uid="uid://dcmeyqabvbksq" path="res://bubble.tscn" id="2_d32vd"]
+[ext_resource type="PackedScene" uid="uid://b0ewbtql7eayc" path="res://dusty.tscn" id="3_svupc"]
+[ext_resource type="PackedScene" uid="uid://cjro8kw3olesk" path="res://soap.tscn" id="4_rf5v7"]
+
+[node name="LevelGroup1" type="Node2D" groups=["LevelGroup", "Scrolling"]]
+
+[node name="Platform" parent="." instance=ExtResource("1_1k2yy")]
+position = Vector2(608, 512)
+
+[node name="Bubble" parent="." instance=ExtResource("2_d32vd")]
+position = Vector2(480, 448)
+
+[node name="Dusty" parent="." instance=ExtResource("3_svupc")]
+position = Vector2(320, 448)
+
+[node name="Platform2" parent="." instance=ExtResource("1_1k2yy")]
+position = Vector2(768, 384)
+
+[node name="Dusty2" parent="." instance=ExtResource("3_svupc")]
+position = Vector2(224, 448)
+
+[node name="Soap" parent="." instance=ExtResource("4_rf5v7")]
+position = Vector2(992, 192)

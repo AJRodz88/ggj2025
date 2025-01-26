@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhambj02iq05m"]
+
+[ext_resource type="PackedScene" uid="uid://bfiet1tpy1nmx" path="res://platform.tscn" id="1_umgsn"]
+[ext_resource type="PackedScene" uid="uid://b0ewbtql7eayc" path="res://dusty.tscn" id="3_h6e2b"]
+
+[node name="LevelGroup1" type="Node2D" groups=["LevelGroup", "Scrolling"]]
+
+[node name="Platform" parent="." instance=ExtResource("1_umgsn")]
+position = Vector2(608, 512)
+
+[node name="Platform2" parent="." instance=ExtResource("1_umgsn")]
+position = Vector2(224, 448)
+
+[node name="Platform3" parent="." instance=ExtResource("1_umgsn")]
+position = Vector2(864, 416)
+
+[node name="Dusty" parent="." instance=ExtResource("3_h6e2b")]
+position = Vector2(384, 448)
+
+[node name="Dusty3" parent="." instance=ExtResource("3_h6e2b")]
+position = Vector2(512, 448)

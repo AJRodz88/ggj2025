@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0g68tc3ejq1n"]
+
+[ext_resource type="Texture2D" uid="uid://cxe21g5syso6w" path="res://Sprites/Floor.png" id="1_vipph"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8r1sj"]
+
+[node name="Floor" type="StaticBody2D"]
+modulate = Color(0.372549, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(31.3781, 1)
+texture = ExtResource("1_vipph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -14)
+shape = SubResource("WorldBoundaryShape2D_8r1sj")

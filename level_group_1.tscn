@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg0ueogopj70t"]
+
+[ext_resource type="PackedScene" uid="uid://bfiet1tpy1nmx" path="res://platform.tscn" id="1_juns3"]
+[ext_resource type="PackedScene" uid="uid://dcmeyqabvbksq" path="res://bubble.tscn" id="2_kt744"]
+
+[node name="LevelGroup1" type="Node2D" groups=["LevelGroup", "Scrolling"]]
+
+[node name="Platform" parent="." instance=ExtResource("1_juns3")]
+position = Vector2(576, 512)
+
+[node name="Bubble" parent="." instance=ExtResource("2_kt744")]
+position = Vector2(608, 416)
+
+[node name="Platform2" parent="." instance=ExtResource("1_juns3")]
+position = Vector2(224, 384)
+
+[node name="Platform3" parent="." instance=ExtResource("1_juns3")]
+position = Vector2(992, 384)
