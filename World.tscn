@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhfsh25uebtyt"]
+[gd_scene load_steps=6 format=3 uid="uid://dhfsh25uebtyt"]
 
 [ext_resource type="PackedScene" uid="uid://cdhsomgev87j0" path="res://player.tscn" id="1_3swfd"]
 [ext_resource type="Script" path="res://world.gd" id="1_5harh"]
 [ext_resource type="PackedScene" uid="uid://c0g68tc3ejq1n" path="res://floor.tscn" id="2_epqmi"]
 [ext_resource type="AudioStream" uid="uid://utq2mdbhhsl8" path="res://Audio/Corncob.mp3" id="4_ljaep"]
+[ext_resource type="FontFile" uid="uid://e6cpa7linuf6" path="res://Sprites/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="5_5sece"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_5harh")
@@ -18,3 +19,14 @@ position = Vector2(593, 500)
 stream = ExtResource("4_ljaep")
 autoplay = true
 bus = &"Music"
+
+[node name="Score" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 164.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.450827, 0.625868, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_5sece")
+theme_override_font_sizes/font_size = 40
+text = "Score: "

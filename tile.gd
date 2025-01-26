@@ -25,7 +25,7 @@ func ResetTile():
 func CleanTile():
 	$Sprite2D.texture = CleanTileTexture
 	IsClean = true
-	GameManager.Score += 1
+	GameManager.AddScore(1)
 	#print("Score: ", GameManager.Score)
 	pass
 

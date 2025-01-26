@@ -43,10 +43,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$Score.text = "Score: " + str(GameManager.HighScore)
 	if GameManager.playerIsDead == true:
 		resetTimer -= delta
 		
 		if resetTimer <= 0:
+			GameManager.HighScore = 0
+			#GameManager.Save()
 			get_tree().reload_current_scene()
 		
 		return
