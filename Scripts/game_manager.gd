@@ -3,13 +3,11 @@ extends Node
 @onready var HighScore: int = 0
 var RightEdge: float = 1280
 @onready var playerIsDead: bool = false
-var save_data: Save
+var save_data: SaveData
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#save_data = Save.load_or_create()
-	#HighScore = save_data.high_score
-	HighScore = 0
+	save_data = SaveData.load_or_create()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-class_name Save extends Resource
+class_name SaveData extends Resource
 
 @export var high_score: int = 0
 
@@ -9,12 +9,12 @@ func save() -> void:
 	ResourceSaver.save(self, save_path)
 
 
-static func load_or_create() -> Save:
+static func load_or_create() -> SaveData:
 	
-	var res: Save
+	var res: SaveData
 	if FileAccess.file_exists(save_path):
-		res = load(save_path) as Save
+		res = load(save_path) as SaveData
 	else:
-		res = Save.new()
+		res = SaveData.new()
 		
 	return res

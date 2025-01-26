@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bufx2wo5bhtit"]
+
+[ext_resource type="Texture2D" uid="uid://bmycms04ydwng" path="res://Sprites/TitleScreen.png" id="1_inqj4"]
+[ext_resource type="Script" path="res://title_screen.gd" id="1_uhihu"]
+[ext_resource type="FontFile" uid="uid://e6cpa7linuf6" path="res://Sprites/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_gapo2"]
+[ext_resource type="Texture2D" uid="uid://dr0x2auy66nj3" path="res://Sprites/Bubble.png" id="3_havwb"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_uhihu")
+
+[node name="TitleName" type="Sprite2D" parent="."]
+position = Vector2(557, 256)
+texture = ExtResource("1_inqj4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 211.0
+offset_top = 485.0
+offset_right = 893.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(0.379009, 0.572699, 1, 1)
+theme_override_fonts/font = ExtResource("2_gapo2")
+theme_override_font_sizes/font_size = 50
+text = "-- Press space to continue --"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(175, 116)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(175, 116)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(901, 163)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1058, 309)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(764, 400)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(78, 576)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(1057, 555)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(103, 323)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(279, 296)
+texture = ExtResource("3_havwb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1070, 86)
+texture = ExtResource("3_havwb")

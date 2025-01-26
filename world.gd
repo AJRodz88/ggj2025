@@ -48,9 +48,9 @@ func _process(delta: float) -> void:
 		resetTimer -= delta
 		
 		if resetTimer <= 0:
+			GameManager.Save()
 			GameManager.HighScore = 0
-			#GameManager.Save()
-			get_tree().reload_current_scene()
+			get_tree().change_scene_to_file("res://title_screen.tscn")
 		
 		return
 	
