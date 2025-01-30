@@ -5,6 +5,8 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 const GRAVITY_MOD = 1.3
 
+var canAirJump: bool = false
+
 
 func _physics_process(delta: float) -> void:
 	if GameManager.playerIsDead == true:
@@ -15,8 +17,9 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * GRAVITY_MOD * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() || canAirJump):
 		velocity.y = JUMP_VELOCITY
+		canAirJump = false
 		$Jump.play()
 
 	#CheckTiles()
@@ -40,6 +43,7 @@ func TakeHit():
 func Jump():
 	velocity.y = JUMP_VELOCITY
 	move_and_slide()
+	canAirJump = true
 	pass
 	
 func CheckTiles():
