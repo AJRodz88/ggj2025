@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdhsomgev87j0" path="res://player.tscn" id="1_3swfd"]
 [ext_resource type="Script" path="res://world.gd" id="1_5harh"]
 [ext_resource type="PackedScene" uid="uid://c0g68tc3ejq1n" path="res://floor.tscn" id="2_epqmi"]
-[ext_resource type="AudioStream" uid="uid://g401p31e5auk" path="res://Audio/MaybeASong.wav" id="4_ksq1x"]
+[ext_resource type="AudioStream" uid="uid://cgtcurps0l3sw" path="res://Audio/PerhapsASong.wav" id="4_kfo7t"]
 [ext_resource type="FontFile" uid="uid://e6cpa7linuf6" path="res://Sprites/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="5_5sece"]
 
 [node name="World" type="Node2D"]
@@ -16,7 +16,7 @@ position = Vector2(200, 350)
 position = Vector2(593, 500)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ksq1x")
+stream = ExtResource("4_kfo7t")
 autoplay = true
 bus = &"Music"
 
