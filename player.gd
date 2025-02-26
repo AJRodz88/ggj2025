@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -600.0
 const GRAVITY_MOD = 1.3
 
 var canAirJump: bool = false
+var littleBitHigher: bool = false
 
 
 func _physics_process(delta: float) -> void:
@@ -20,7 +21,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() || canAirJump):
 		velocity.y = JUMP_VELOCITY
 		canAirJump = false
+		littleBitHigher = true
 		$Jump.play()
+
+	#doesn't work, interfears with the regular jump	
+	#if Input.is_action_pressed("ui_accept") and littleBitHigher:
+		#velocity.y = JUMP_VELOCITY/4
+		#canAirJump = false
+		#littleBitHigher = false
 
 	#CheckTiles()
 	# Get the input direction and handle the movement/deceleration.
