@@ -23,6 +23,10 @@ func _physics_process(delta: float) -> void:
 		canAirJump = false
 		littleBitHigher = true
 		$Jump.play()
+		$AnimatedSprite2D.play("Jump")
+	elif is_on_floor():
+		$AnimatedSprite2D.play("Run")
+		
 
 	#doesn't work, interfears with the regular jump	
 	#if Input.is_action_pressed("ui_accept") and littleBitHigher:
